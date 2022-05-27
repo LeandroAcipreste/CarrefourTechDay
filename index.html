@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buscar Carrefour</title>
+    <link href="/css/style.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="container-fluid">
+        <div class="top row">
+          <img
+            class="img-top"
+            src="./css/img/inicial2.webp"
+            alt="Imagem das ofertas"
+          />
+          <div class="container-fluid">
+            <div class="row ">
+              <div class="menu-1">
+                <div class="card-menu-1">
+                  <img
+                    class="card-menu1-icon"
+                    src="/css/img/comprar.svg"
+                    alt="Mercado"
+                  />
+                  <p class="">MERCADO</p>
+                </div>
+              </div>
+              
+            </div>
+            <div class="container-fluid search">
+              <form class="d-flex form-search" role="search">
+                <img
+                  class="logo-nav"
+                  src="./css/img/carrefour-logo-2.png"
+                  alt="Carrefour logo"
+                />
+                <input
+                  class="input-group form-search " 
+                  data-toggle="collapse"
+                  id="cep"
+                  type="search"
+                  placeholder="Digite o CEP"
+                  aria-label="Search"
+                />
+                <button
+                  class="btn btn-outline-secondary btn-search"
+                  id="cepSubmit"
+                  data-toggle="collapse"
+                  type="submit"
+                
+                >
+                  <img
+                    class="img-logo"
+                    src="/css/img/search.png"
+                    alt="procurar"
+                  />
+                </button>
+              </form>
+            </div>
+            <nav class="navbar nav bg-my-color-2" id="navbarr">
+              <div class="container-fluid"></div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="space container-fluid">
+        <button type="button" class=" btn btn-link link-alterar">Alterar ></button>
+      </div>
+      <section class="align-itens-center">
+        <div class="container-fluid">
+          <div class="row ">
+            <div class="banner">
+              <img class="img-banner"src="/css/img/banner2.webp" alt="Ofertas">
+            </div>
+          </div>
+        
+          <div class="row">
+            <div class="row-size">
+              <div id="carouselExampleControls" class="carousel slide carrousel-size" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/css/img/carrosel-oferta1.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/css/img/carrosel-oferta2.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/css/img/carrosel-oferta3.webp" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="row  ">
+                <div class="col">
+                  <div class="card" id="card-1">
+                    <div class="card-body" >
+                      <h5></h5>
+                      <p  class="collapse" id="logradouro"></p>
+                      <p class="" id="bairro"></p>
+                      <p class="" id="localidade"></p>
+                    </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="card">
+                    <div class="card-body border-card"></div>
+                  </div>
+              </div>
+            </div>
+            
+      </section>
+    </main>
+  </body>
+  <script src="/script.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"
+  ></script>
+</html>
