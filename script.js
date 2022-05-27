@@ -1,7 +1,7 @@
 'use strict';
 
 const preencherCard = (endereco) => {
-    document.querySelectorAll('#logradouro').value = endereco.logradouro;
+    document.getElementById('logradouro').value = endereco.logradouro;
     window.alert(endereco.logradouro)
     
     //document.getElementById('bairro').value = endereco.bairro;
