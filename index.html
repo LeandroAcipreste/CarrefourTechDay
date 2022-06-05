@@ -30,15 +30,15 @@
               
             </div>
             <div class="container-fluid search">
-              <form class="d-flex form-search" role="search">
-                <img
+              <img
                   class="logo-nav"
                   src="./css/img/carrefour-logo-2.png"
                   alt="Carrefour logo"
                 />
+              <form class="d-flex form-search" role="search">
                 <input
                   class="input-group form-search " 
-                  data-toggle="collapse"
+                  data-toggle="input"
                   id="cep"
                   type="search"
                   placeholder="Digite o CEP"
@@ -46,9 +46,10 @@
                 />
                 <button
                   class="btn btn-outline-secondary btn-search"
-                  id="cepSubmit"
-                  data-toggle="collapse"
+                  id="sendCep"
+                  data-toggle="button"
                   type="submit"
+                  form="cep"
                 
                 >
                   <img
@@ -59,8 +60,8 @@
                 </button>
               </form>
             </div>
-            <nav class="navbar nav bg-my-color-2" id="navbarr">
-              <div class="container-fluid"></div>
+            <nav class="navbar nav bg-my-color-2 " id="navbarr">
+              <div class="container-fluid "></div>
             </nav>
           </div>
         </div>
@@ -106,7 +107,7 @@
                   <div class="card" id="card-1">
                     <div class="card-body" >
                       <h5></h5>
-                      <p  class="collapse" id="logradouro"></p>
+                      <p id="logradouro"></p>
                       <p class="" id="bairro"></p>
                       <p class="" id="localidade"></p>
                     </div>
