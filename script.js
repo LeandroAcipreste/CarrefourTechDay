@@ -98,32 +98,25 @@ const listaProdutos = (produto) =>{
 //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const primeiroProduto =[produto[0]]
     primeiroProduto.forEach(itens =>{
-        const items = itens.items
-        items.forEach (sellers => {
-            const Sellers = sellers.sellers
-            Sellers.forEach(commertialOffer =>{
-                produtos.push({
-                    produto1 : itens.productName,
-                    preco1 : commertialOffer.commertialOffer.Price
-                })
+        const items1 = itens.items
+        items1.forEach (sellers2 => {
+            produtos.push({
+                produto1 : itens.productName,
+                preco1 : sellers2.sellers[0].commertialOffer.Price,
+                imgUTag: sellers2.images[0].imageUrl
             })
-        }) 
+        })
     })
     
 //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const segundoProduto =[produto[1]]
-    
     segundoProduto.forEach(itens =>{
-        
         const items2 = itens.items
         items2.forEach (sellers2 => {
-            const Sellers2 = sellers2.sellers
-            Sellers2.forEach(commertialOffer =>{
-                produtos.push({
-                    produto2 : itens.productName,
-                    preco2 : commertialOffer.commertialOffer.Price
-                })
-            
+            produtos.push({
+                produto2 : itens.productName,
+                preco2 : sellers2.sellers[0].commertialOffer.Price,
+                imgUTag: sellers2.images[0].imageUrl
             })
         })
     })
@@ -131,15 +124,12 @@ const listaProdutos = (produto) =>{
 //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const terceiroProduto =[produto[2]]
     terceiroProduto.forEach(itens =>{
-        
         const items3 = itens.items
-        items3.forEach (sellers3 => {
-            const Sellers3 = sellers3.sellers
-            Sellers3.forEach(commertialOffer =>{
-                produtos.push({
-                    produto3 : itens.productName,
-                    preco3 : commertialOffer.commertialOffer.Price
-                })
+        items3.forEach (sellers2 => {
+            produtos.push({
+                produto3 : itens.productName,
+                preco3 : sellers2.sellers[0].commertialOffer.Price,
+                imgUTag: sellers2.images[0].imageUrl
             })
         })
     })
@@ -147,15 +137,12 @@ const listaProdutos = (produto) =>{
 //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const quartoProduto =[produto[3]]
     quartoProduto.forEach(itens =>{
-        
         const items4 = itens.items
         items4.forEach (sellers2 => {
-            const Sellers4 = sellers2.sellers
-            Sellers4.forEach(commertialOffer =>{
-                produtos.push({
-                    produto4 : itens.productName,
-                    preco4 : commertialOffer.commertialOffer.Price
-                })
+            produtos.push({
+                produto4 : itens.productName,
+                preco4 : sellers2.sellers[0].commertialOffer.Price,
+                imgUTag: sellers2.images[0].imageUrl
             })
         })
     })
@@ -163,15 +150,12 @@ const listaProdutos = (produto) =>{
 //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const quintoProduto =[produto[4]]
     quintoProduto.forEach(itens =>{
-        
         const items5 = itens.items
         items5.forEach (sellers2 => {
-            const Sellers5 = sellers2.sellers
-            Sellers5.forEach(commertialOffer =>{
-                produtos.push({
-                    produto5 : itens.productName,
-                    preco5 : commertialOffer.commertialOffer.Price
-                })
+            produtos.push({
+                produto5 : itens.productName,
+                preco5 : sellers2.sellers[0].commertialOffer.Price,
+                imgUTag: sellers2.images[0].imageUrl
             })
         })
     })
@@ -179,32 +163,25 @@ const listaProdutos = (produto) =>{
 //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const sextoProduto =[produto[5]]
     sextoProduto.forEach(itens =>{
-        
         const items6 = itens.items
         items6.forEach (sellers2 => {
-            const Sellers6 = sellers2.sellers
-            Sellers6.forEach(commertialOffer =>{
-                produtos.push({
-                    produto6 : itens.productName,
-                    preco6 : commertialOffer.commertialOffer.Price
-                })
+            produtos.push({
+                produto6 : itens.productName,
+                preco6 : sellers2.sellers[0].commertialOffer.Price,
+                imgUTag: sellers2.images[0].imageUrl
             })
         })
-        
     })
 
 //Filtrando Nome do Produto e Preço e armazendando no Array Produtos
     const setimoProduto =[produto[6]]
     setimoProduto.forEach(itens =>{
-        
         const items7 = itens.items
         items7.forEach (sellers2 => {
-            const Sellers7 = sellers2.sellers
-            Sellers7.forEach(commertialOffer =>{
-                produtos.push({
-                    produto7 : itens.productName,
-                    preco7 : commertialOffer.commertialOffer.Price
-                })
+            produtos.push({
+                produto7 : itens.productName,
+                preco7 : sellers2.sellers[0].commertialOffer.Price,
+                imgUTag: sellers2.images[0].imageUrl
             })
         })
     })
@@ -212,15 +189,12 @@ const listaProdutos = (produto) =>{
 //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const oitavoProduto =[produto[7]]
     oitavoProduto.forEach(itens =>{
-        
         const items8 = itens.items
         items8.forEach (sellers2 => {
-            const Sellers8 = sellers2.sellers
-            Sellers8.forEach(commertialOffer =>{
-                produtos.push({
-                    produto8 : itens.productName,
-                    preco8 : commertialOffer.commertialOffer.Price
-                })
+            produtos.push({
+                produto8 : itens.productName,
+                preco8 : sellers2.sellers[0].commertialOffer.Price,
+                imgUTag: sellers2.images[0].imageUrl
             })
         })
     })
@@ -228,15 +202,12 @@ const listaProdutos = (produto) =>{
 //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const nonoProduto =[produto[8]]
     nonoProduto.forEach(itens =>{
-        
         const items9 = itens.items
         items9.forEach (sellers2 => {
-            const Sellers9 = sellers2.sellers
-            Sellers9.forEach(commertialOffer =>{
-                produtos.push({
-                    produto9 : itens.productName,
-                    preco9 : commertialOffer.commertialOffer.Price
-                })
+            produtos.push({
+                produto9 : itens.productName,
+                preco9 : sellers2.sellers[0].commertialOffer.Price,
+                imgUTag: sellers2.images[0].imageUrl
             })
         })
     })
@@ -244,48 +215,88 @@ const listaProdutos = (produto) =>{
  //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const decimoProduto =[produto[9]]
     decimoProduto.forEach(itens =>{
-    
         const items10 = itens.items
-        items10.forEach (sellers => {
-            const Sellers10 = sellers.sellers
-            Sellers10.forEach(commertialOffer =>{
-                produtos.push({
-                    produto10 : itens.productName,
-                    preco10 : commertialOffer.commertialOffer.Price
-                })
+        items10.forEach (sellers2 => {
+            produtos.push({
+                produto10 : itens.productName,
+                preco10 : sellers2.sellers[0].commertialOffer.Price,
+                imgUTag: sellers2.images[0].imageUrl
             })
         })
     })
    
-//colocando Produtos e Preços da DOM 
+//colocando Produtos, Preços imagem na DOM 
 
     document.getElementById('produto1').innerHTML = produtos[1].produto1;
     document.getElementById('preco1').innerHTML = produtos[1].preco1.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    
+    const pro1 = document.getElementById('pro1')
+    const element1 = document.createElement("img") 
+    element1.setAttribute('src', produtos[1].imgUTag);
+    pro1.appendChild(element1);
 
     document.getElementById('produto2').innerHTML = produtos[2].produto2;
     document.getElementById('preco2').innerHTML = produtos[2].preco2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
+    const pro2 = document.getElementById('pro2')
+    const element2 = document.createElement("img") 
+    element2.setAttribute('src', produtos[2].imgUTag);
+    pro2.appendChild(element2);
+
     document.getElementById('produto3').innerHTML = produtos[3].produto3;
     document.getElementById('preco3').innerHTML = produtos[3].preco3.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
+    const pro3 = document.getElementById('pro3')
+    const element3 = document.createElement("img") 
+    element3.setAttribute('src', produtos[3].imgUTag);
+    pro3.appendChild(element3);
 
     document.getElementById('produto4').innerHTML = produtos[4].produto4;
     document.getElementById('preco4').innerHTML = produtos[4].preco4.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
+    const pro4 = document.getElementById('pro4')
+    const element4 = document.createElement("img") 
+    element4.setAttribute('src', produtos[4].imgUTag);
+    pro4.appendChild(element4);
+
     document.getElementById('produto5').innerHTML = produtos[5].produto5;
     document.getElementById('preco5').innerHTML = produtos[5].preco5.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
+    const pro5 = document.getElementById('pro5')
+    const element5 = document.createElement("img") 
+    element5.setAttribute('src', produtos[5].imgUTag);
+    pro5.appendChild(element5);
+
     document.getElementById('produto6').innerHTML = produtos[6].produto6;
     //document.getElementById('preco6').innerHTML = produtos[6].preco6.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    const pro6 = document.getElementById('pro6')
+    const element6 = document.createElement("img") 
+    element6.setAttribute('src', produtos[6].imgUTag);
+    pro6.appendChild(element6);
 
     document.getElementById('produto7').innerHTML = produtos[7].produto7;
     document.getElementById('preco7').innerHTML = produtos[7].preco7.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
+    const pro7 = document.getElementById('pro7')
+    const element7 = document.createElement("img") 
+    element7.setAttribute('src', produtos[7].imgUTag);
+    pro7.appendChild(element7);
+
     document.getElementById('produto8').innerHTML = produtos[8].produto8;
     document.getElementById('preco8').innerHTML = produtos[8].preco8.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    
+    const pro8 = document.getElementById('pro8')
+    const element8 = document.createElement("img") 
+    element8.setAttribute('src', produtos[8].imgUTag);
+    pro8.appendChild(element8);
 
     document.getElementById('produto9').innerHTML = produtos[9].produto9;
     document.getElementById('preco9').innerHTML = produtos[9].preco9.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-
+   
+    const pro9 = document.getElementById('pro9')
+    const element9 = document.createElement("img") 
+    element9.setAttribute('src', produtos[9].imgUTag);
+    pro9.appendChild(element9);
 }
 
 
