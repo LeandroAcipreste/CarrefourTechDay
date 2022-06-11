@@ -58,6 +58,16 @@ const pesquisarCep = async(cep) => {
     document.getElementById('produto9').innerHTML = '';
     document.getElementById('preco9').innerHTML = '';
 
+    document.getElementById('pro1').innerHTML ='';
+    document.getElementById('pro2').innerHTML ='';
+    document.getElementById('pro3').innerHTML ='';
+    document.getElementById('pro4').innerHTML ='';
+    document.getElementById('pro5').innerHTML ='';
+    document.getElementById('pro6').innerHTML ='';
+    document.getElementById('pro7').innerHTML ='';
+    document.getElementById('pro8').innerHTML ='';
+    document.getElementById('pro9').innerHTML ='';
+
 })
 }
 
