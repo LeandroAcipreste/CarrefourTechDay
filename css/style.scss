@@ -187,17 +187,17 @@ $body-bg:$mycolor-4;
       
 }
 
-.preco{
-
-}
-
-.nome{
-
+.produtos{
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    align-items: baseline;
+    margin-right    : 500px;
 }
 
 @media (max-width : 820px){
     .top{
-        width: 780px;
+        width: 760px;
     }
 
     .img-top{
@@ -220,11 +220,11 @@ $body-bg:$mycolor-4;
     }
 
     .nav{
-        width: 760px;
+        width: 750px;
         height: 40px;
     }
     .space{
-        width: 745px;
+        width: 600px;
     }
 
     .retornoCep{
@@ -254,7 +254,7 @@ $body-bg:$mycolor-4;
 @media(max-width : 400px){
    
     .top{
-        width: 360px;
+        width: 345px;
     }
 
     .img-top{
@@ -265,6 +265,10 @@ $body-bg:$mycolor-4;
         background-position: center center;
     }
 
+    .menu{
+        width: 360;
+        height: 40px;
+    }
     .menu-1{
         width: 360px;
         height: 40px;
@@ -317,15 +321,15 @@ $body-bg:$mycolor-4;
     .img-banner{
         width: 336px;
         height: 100px;
-        margin-left: 0px;
+        margin-left: 10px;
         background-image: url(/css/img/banner2.gif);
         background-position: center center;
     }
     
     .retornoCep{
         
-        font-size: 5px;
-        padding-top: 0px;
+        font-size: 12px;
+        padding-top: 3px;
         margin-left: 10px;
     }
 
@@ -341,12 +345,13 @@ $body-bg:$mycolor-4;
     .row-carrousel{
         width: 336px;
         height: 100px;
+        margin-left: 10px;
     }
 
     .centralizando{
        width: 360px;
        margin-left: 0px;
     }
-
     
 }
+

@@ -3,11 +3,17 @@
 //Evento do botão pesqusiar CEP
 const btn = document.getElementById('sendCep');
 
-btn.addEventListener("click", function(e) {
+ const pegaCep = btn.addEventListener("click", function(e) {
     e.preventDefault();
     const cep = document.getElementById('cep').value;
-    pesquisarCep(cep)
+    if(cep.length < 1){
+        window.alert("O campo está vazio, por favor digite um CEP!")
+    }else{
+        pesquisarCep(cep)
+    }
+    
 })
+
 
 const pesquisarCep = async(cep) => {
 //Incluindo CEP na página
@@ -33,7 +39,7 @@ const pesquisarCep = async(cep) => {
 //Selenionar o primeiro array de lojas que a API retornou
 const selecionarLoja = (lojas) => {
     if (lojas.length > 1 ){
-        let lojasProx = lojas[0]
+        const lojasProx = lojas[0]
         selecionarLojaCerta(lojasProx)
     }
 }
@@ -57,240 +63,211 @@ const buscarProdutos = async(idLoja)=>{
     const produtos = await dados.json();
     listaProdutos(produtos);
 }
+//Array que está armazendando a busca 
 
-//Filtrando Produtos
+
+ 
 const listaProdutos = (produto) =>{
+    const produtos = [{
+    }]
+    console.log(produtos)
 
-    //Filtrando Primeiro Produto
+//Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const primeiroProduto =[produto[0]]
     primeiroProduto.forEach(itens =>{
-        
-        const nomeProduto = itens.productName
-        console.log (nomeProduto)
-        
-    })
-
-    //Filtrando Primeiro Preço
-   primeiroProduto.forEach(itens => {
         const items = itens.items
         items.forEach (sellers => {
             const Sellers = sellers.sellers
             Sellers.forEach(commertialOffer =>{
-                const CommertialOffer = commertialOffer.commertialOffer.Price;
-                console.log (CommertialOffer)
+                produtos.push({
+                    produto1 : itens.productName,
+                    preco1 : commertialOffer.commertialOffer.Price
+                })
             })
-        })
-    })
-    
-    //Filtrando Segundo Produto
-    const segundoProduto =[produto[1]]
-    segundoProduto.forEach(itens =>{
-        
-        const nomeProduto2 = itens.productName
-        console.log(nomeProduto2 ) 
-        
+        }) 
     })
 
-    //Filtrando Segundo Preço
-   segundoProduto.forEach(itens => {
+
+    
+//Buscando Nome do Produto e Preço para armazendando no Array Produtos
+    const segundoProduto =[produto[1]]
+    
+    segundoProduto.forEach(itens =>{
+        
         const items2 = itens.items
         items2.forEach (sellers2 => {
             const Sellers2 = sellers2.sellers
             Sellers2.forEach(commertialOffer =>{
-                const CommertialOffer2 = commertialOffer.commertialOffer.Price;
-                console.log(CommertialOffer2) 
+                produtos.push({
+                    produto2 : itens.productName,
+                    preco2 : commertialOffer.commertialOffer.Price
+                })
+            
             })
         })
     })
 
-    //Filtrando Terceiro Produto
+//Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const terceiroProduto =[produto[2]]
     terceiroProduto.forEach(itens =>{
         
-        const nomeProduto3 = itens.productName
-        console.log(nomeProduto3)
-        
-        
-    })
-
-    //Filtrando terceiro Preço
-   terceiroProduto.forEach(itens => {
         const items3 = itens.items
-        items3.forEach (sellers => {
-            const Sellers3 = sellers.sellers
+        items3.forEach (sellers3 => {
+            const Sellers3 = sellers3.sellers
             Sellers3.forEach(commertialOffer =>{
-                const CommertialOffer3 = commertialOffer.commertialOffer.Price;
-                console.log(CommertialOffer3)
+                produtos.push({
+                    produto3 : itens.productName,
+                    preco3 : commertialOffer.commertialOffer.Price
+                })
             })
         })
     })
 
-    //Filtrando Quarto Produto
+//Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const quartoProduto =[produto[3]]
     quartoProduto.forEach(itens =>{
         
-        const nomeProduto4 = itens.productName
-        console.log(nomeProduto4)
-        
-    })
-
-    //Filtrando quarto Preço
-   quartoProduto.forEach(itens => {
         const items4 = itens.items
-        items4.forEach (sellers => {
-            const Sellers4 = sellers.sellers
+        items4.forEach (sellers2 => {
+            const Sellers4 = sellers2.sellers
             Sellers4.forEach(commertialOffer =>{
-                const CommertialOffer4 = commertialOffer.commertialOffer.Price;
-                console.log(CommertialOffer4)
+                produtos.push({
+                    produto4 : itens.productName,
+                    preco4 : commertialOffer.commertialOffer.Price
+                })
             })
         })
     })
 
-    //Filtrando QuintoProduto
+//Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const quintoProduto =[produto[4]]
     quintoProduto.forEach(itens =>{
         
-        const nomeProduto5 = itens.productName
-        console.log(nomeProduto5)
-        
-    })
-
-    //Filtrando Quinto Preço
-   quintoProduto.forEach(itens => {
         const items5 = itens.items
-        items5.forEach (sellers => {
-            const Sellers5 = sellers.sellers
+        items5.forEach (sellers2 => {
+            const Sellers5 = sellers2.sellers
             Sellers5.forEach(commertialOffer =>{
-                const CommertialOffer5 = commertialOffer.commertialOffer.Price;
-                console.log(CommertialOffer5)
+                produtos.push({
+                    produto5 : itens.productName,
+                    preco5 : commertialOffer.commertialOffer.Price
+                })
             })
         })
     })
 
-    //Filtrando Sexto Produto
+//Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const sextoProduto =[produto[5]]
     sextoProduto.forEach(itens =>{
         
-        const nomeProduto6 = itens.productName
-        console.log(nomeProduto6)
+        const items6 = itens.items
+        items6.forEach (sellers2 => {
+            const Sellers6 = sellers2.sellers
+            Sellers6.forEach(commertialOffer =>{
+                produtos.push({
+                    produto6 : itens.productName,
+                    preco6 : commertialOffer.commertialOffer.Price
+                })
+            })
+        })
         
     })
 
-    //Filtrando Sexto Preço
-   sextoProduto.forEach(itens => {
-        const items6 = itens.items
-        items6.forEach (sellers => {
-            const Sellers6 = sellers.sellers
-            Sellers6.forEach(commertialOffer =>{
-                const CommertialOffer6 = commertialOffer.commertialOffer.Price;
-                console.log(CommertialOffer6)
-            })
-        })
-    })
-
-    //Filtrando Sétimo Produto
+//Filtrando Nome do Produto e Preço e armazendando no Array Produtos
     const setimoProduto =[produto[6]]
     setimoProduto.forEach(itens =>{
         
-        const nomeProduto7 = itens.productName
-        console.log(nomeProduto7)
-        
-    })
-
-    //Filtrando Sétimo Preço
-   setimoProduto.forEach(itens => {
         const items7 = itens.items
-        items7.forEach (sellers => {
-            const Sellers7 = sellers.sellers
+        items7.forEach (sellers2 => {
+            const Sellers7 = sellers2.sellers
             Sellers7.forEach(commertialOffer =>{
-                const CommertialOffer7 = commertialOffer.commertialOffer.Price;
-                console.log(CommertialOffer7)
+                produtos.push({
+                    produto7 : itens.productName,
+                    preco7 : commertialOffer.commertialOffer.Price
+                })
             })
         })
     })
 
-    //Filtrando Oitavo Produto
+//Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const oitavoProduto =[produto[7]]
     oitavoProduto.forEach(itens =>{
         
-        const nomeProduto8 = itens.productName
-        console.log(nomeProduto8)
-        
-    })
-
-    //Filtrando oitavo Preço
-   oitavoProduto.forEach(itens => {
         const items8 = itens.items
-        items8.forEach (sellers => {
-            const Sellers8 = sellers.sellers
+        items8.forEach (sellers2 => {
+            const Sellers8 = sellers2.sellers
             Sellers8.forEach(commertialOffer =>{
-                const CommertialOffer8 = commertialOffer.commertialOffer.Price;
-                console.log(CommertialOffer8)
+                produtos.push({
+                    produto8 : itens.productName,
+                    preco8 : commertialOffer.commertialOffer.Price
+                })
             })
         })
     })
 
-    //Filtrando Nono Produto
+//Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const nonoProduto =[produto[8]]
     nonoProduto.forEach(itens =>{
         
-        const nomeProduto10 = itens.productName
-        console.log(nomeProduto10)
-        
-    })
-
-    //Filtrando Nono Preço
-   nonoProduto.forEach(itens => {
         const items9 = itens.items
-        items9.forEach (sellers => {
-            const Sellers9 = sellers.sellers
+        items9.forEach (sellers2 => {
+            const Sellers9 = sellers2.sellers
             Sellers9.forEach(commertialOffer =>{
-                const CommertialOffer10 = commertialOffer.commertialOffer.Price;
-                console.log(CommertialOffer10)
+                produtos.push({
+                    produto9 : itens.productName,
+                    preco9 : commertialOffer.commertialOffer.Price
+                })
             })
         })
     })
-
-    //Filtrando Décimo Produto
+    
+ //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const decimoProduto =[produto[9]]
     decimoProduto.forEach(itens =>{
-        
-        const nomeProduto10 = itens.productName
-        console.log(nomeProduto10)
-        
-    })
-
-    //Filtrando Décimo Preço
-   decimoProduto.forEach(itens => {
+    
         const items10 = itens.items
         items10.forEach (sellers => {
             const Sellers10 = sellers.sellers
             Sellers10.forEach(commertialOffer =>{
-                const CommertialOffer10 = commertialOffer.commertialOffer.Price;
-                console.log(CommertialOffer10)
+                produtos.push({
+                    produto10 : itens.productName,
+                    preco10 : commertialOffer.commertialOffer.Price
+                })
             })
         })
     })
-
    
-    const produtos = [{
-        produto : "lashdasdh",
-        preco : 0.00
-    },
-    {
-        produto : "askdjadj",
-        preco   : 0.00
-    }]
-    
+//colocando Produtos e Preços da DOM 
+
+    document.getElementById('produto1').innerHTML = produtos[1].produto1
+    document.getElementById('preco1').innerHTML = produtos[1].preco1
+
+    document.getElementById('produto2').innerHTML = produtos[2].produto2
+    document.getElementById('preco2').innerHTML = produtos[2].preco2
+
+    document.getElementById('produto3').innerHTML = produtos[3].produto3
+    document.getElementById('preco3').innerHTML = produtos[3].preco3
+
+    document.getElementById('produto4').innerHTML = produtos[4].produto4
+    document.getElementById('preco4').innerHTML = produtos[4].preco4
+
+    document.getElementById('produto5').innerHTML = produtos[5].produto5
+    document.getElementById('preco5').innerHTML = produtos[5].preco5
+
+    document.getElementById('produto6').innerHTML = produtos[6].produto6
+    document.getElementById('preco6').innerHTML = produtos[6].preco6
+
+    document.getElementById('produto7').innerHTML = produtos[7].produto7
+    document.getElementById('preco7').innerHTML = produtos[7].preco7
+
+    document.getElementById('produto8').innerHTML = produtos[8].produto8
+    document.getElementById('preco8').innerHTML = produtos[8].preco8
+
+    document.getElementById('produto9').innerHTML = produtos[9].produto9
+    document.getElementById('preco9').innerHTML = produtos[9].preco9
+
 }
 
 
 
 
 
-
-
-
- //.items.sellers.commertialOffer.Installments*/
- /*const Installments = installments.Installments
-                    console.log(Installments)*/
