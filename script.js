@@ -11,9 +11,7 @@ const btn = document.getElementById('sendCep');
     }else{
         pesquisarCep(cep)
     }
-    
 })
-
 
 const pesquisarCep = async(cep) => {
 //Incluindo CEP na página
@@ -25,13 +23,40 @@ const pesquisarCep = async(cep) => {
     const lojas = await dados.json();
     selecionarLoja(lojas);
 
-//Limpando CEP no formulário e na Página com o botão Alterar
+//Limpando todos os dados na Página com o botão Alterar
     const btnAlterar = document.getElementById('alterarCep');
 
     btnAlterar.addEventListener('click', function(e){
     e.preventDefault();
     document.getElementById('cep').value = '';
     document.getElementById('retornoCep').innerHTML = '';
+    
+    document.getElementById('produto1').innerHTML = '';
+    document.getElementById('preco1').innerHTML = '';
+
+    document.getElementById('produto2').innerHTML = '';
+    document.getElementById('preco2').innerHTML = '';
+
+    document.getElementById('produto3').innerHTML = '';
+    document.getElementById('preco3').innerHTML = '';
+
+    document.getElementById('produto4').innerHTML = '';
+    document.getElementById('preco4').innerHTML = '';
+
+    document.getElementById('produto5').innerHTML = '';
+    document.getElementById('preco5').innerHTML = '';
+
+    document.getElementById('produto6').innerHTML = '';
+    //document.getElementById('preco6').innerHTML = '';
+
+    document.getElementById('produto7').innerHTML = '';
+    document.getElementById('preco7').innerHTML = '';
+
+    document.getElementById('produto8').innerHTML = '';
+    document.getElementById('preco8').innerHTML = '';
+
+    document.getElementById('produto9').innerHTML = '';
+    document.getElementById('preco9').innerHTML = '';
 
 })
 }
@@ -64,8 +89,6 @@ const buscarProdutos = async(idLoja)=>{
     listaProdutos(produtos);
 }
 //Array que está armazendando a busca 
-
-
  
 const listaProdutos = (produto) =>{
     const produtos = [{
@@ -86,8 +109,6 @@ const listaProdutos = (produto) =>{
             })
         }) 
     })
-
-
     
 //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const segundoProduto =[produto[1]]
@@ -238,32 +259,32 @@ const listaProdutos = (produto) =>{
    
 //colocando Produtos e Preços da DOM 
 
-    document.getElementById('produto1').innerHTML = produtos[1].produto1
-    document.getElementById('preco1').innerHTML = produtos[1].preco1
+    document.getElementById('produto1').innerHTML = produtos[1].produto1;
+    document.getElementById('preco1').innerHTML = produtos[1].preco1.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
-    document.getElementById('produto2').innerHTML = produtos[2].produto2
-    document.getElementById('preco2').innerHTML = produtos[2].preco2
+    document.getElementById('produto2').innerHTML = produtos[2].produto2;
+    document.getElementById('preco2').innerHTML = produtos[2].preco2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
-    document.getElementById('produto3').innerHTML = produtos[3].produto3
-    document.getElementById('preco3').innerHTML = produtos[3].preco3
+    document.getElementById('produto3').innerHTML = produtos[3].produto3;
+    document.getElementById('preco3').innerHTML = produtos[3].preco3.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
-    document.getElementById('produto4').innerHTML = produtos[4].produto4
-    document.getElementById('preco4').innerHTML = produtos[4].preco4
+    document.getElementById('produto4').innerHTML = produtos[4].produto4;
+    document.getElementById('preco4').innerHTML = produtos[4].preco4.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
-    document.getElementById('produto5').innerHTML = produtos[5].produto5
-    document.getElementById('preco5').innerHTML = produtos[5].preco5
+    document.getElementById('produto5').innerHTML = produtos[5].produto5;
+    document.getElementById('preco5').innerHTML = produtos[5].preco5.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
-    document.getElementById('produto6').innerHTML = produtos[6].produto6
-    document.getElementById('preco6').innerHTML = produtos[6].preco6
+    document.getElementById('produto6').innerHTML = produtos[6].produto6;
+    //document.getElementById('preco6').innerHTML = produtos[6].preco6.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
-    document.getElementById('produto7').innerHTML = produtos[7].produto7
-    document.getElementById('preco7').innerHTML = produtos[7].preco7
+    document.getElementById('produto7').innerHTML = produtos[7].produto7;
+    document.getElementById('preco7').innerHTML = produtos[7].preco7.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
-    document.getElementById('produto8').innerHTML = produtos[8].produto8
-    document.getElementById('preco8').innerHTML = produtos[8].preco8
+    document.getElementById('produto8').innerHTML = produtos[8].produto8;
+    document.getElementById('preco8').innerHTML = produtos[8].preco8.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
-    document.getElementById('produto9').innerHTML = produtos[9].produto9
-    document.getElementById('preco9').innerHTML = produtos[9].preco9
+    document.getElementById('produto9').innerHTML = produtos[9].produto9;
+    document.getElementById('preco9').innerHTML = produtos[9].preco9.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
 }
 
