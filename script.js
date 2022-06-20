@@ -103,7 +103,7 @@ const buscarProdutos = async(idLoja)=>{
 const listaProdutos = (produto) =>{
     const produtos = [{
     }]
-    console.log(produtos)
+    
 
 //Buscando Nome do Produto e Preço para armazendando no Array Produtos
     const primeiroProduto =[produto[0]]
